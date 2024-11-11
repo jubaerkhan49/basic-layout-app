@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.quiz_1.HomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.quiz_1.ProfileFragment"
+        android:label="Profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_manageProfileFragment"
+            app:destination="@id/manageProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/parkingFragment"
+        android:name="com.example.quiz_1.ParkingFragment"
+        android:label="Manage Parking">
+        <action
+            android:id="@+id/action_parkingFragment_to_parkingDetails"
+            app:destination="@id/parkingDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkingDetails"
+        android:name="com.example.quiz_1.ParkingDetails"
+        android:label="Parking Details" />
+
+    <fragment
+        android:id="@+id/manageProfileFragment"
+        android:name="com.example.quiz_1.ManageProfileFragment"
+        android:label="Manage Profile" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.quiz_1.SettingsFragment"
+        android:label="Settings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.quiz_1.EventFragment"
+        android:label="Manage Event">
+        <action
+            android:id="@+id/action_eventFragment_to_eventDetails"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.example.quiz_1.EventDetailsFragment"
+        android:label="Event Details" />
+</navigation>
